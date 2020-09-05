@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <h1>My First Flask App</h1>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"/>
+<html>
+    <body>
+        <div class="container">
+            <h1 class=logo>"Nakul Main Page"</h1>
+            <strong><nav>
+                <ul class="menu">
+                    <li><a href="{{ url_for('home') }}">Home</a></li>
+                    <li><a href="{{ url_for('about') }}">About</a></li>
+                    <li><a href="{{ url_for('volcanoes') }}">Volcanoes</a></li>
+                </ul>
+            </nav></strong>
+        </div>
+        <div class="container">
+            {%block content%}
+            {%endblock%}
+        </div>
+    </body>
+</html>
+</head>
